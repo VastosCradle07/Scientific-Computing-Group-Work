@@ -3,11 +3,11 @@ Tasks 2 to 20, each with the original program, a changed-parameter run, a modifi
 Folder layout
 Folder	Contents
 `code/`	The 19 original programs (Task 2 to Task 20), cleaned and comment-free
-`changed\_parameter/`	The same programs with one input or parameter changed (Instruction C)
-`modified\_case/`	New programs solving a different but related real-world case (Instruction E)
+`changed\\\\\\\\\\\\\\\_parameter/`	The same programs with one input or parameter changed (Instruction C)
+`modified\\\\\\\\\\\\\\\_case/`	New programs solving a different but related real-world case (Instruction E)
 `outputs/`	Text output of every program and every graph as a PNG
 `docs/`	One markdown file per task: inputs, operation, change, interpretation, new case (Instructions B, C, D, E)
-`PRESENTATION\_SUMMARY.txt`	Short plain-text summary for the presentation
+`PRESENTATION\\\\\\\\\\\\\\\_SUMMARY.txt`	Short plain-text summary for the presentation
 Task index
 Task	Topic and documentation	Modified real-world case
 2	NumPy Arrays and Numerical Computation	IoT water-tank level monitoring
@@ -33,9 +33,9 @@ How to run
 ```bash
 pip install -r requirements.txt
 cd code
-python Task\_02\_numpy\_arrays.py
+python Task\\\\\\\\\\\\\\\_02\\\\\\\\\\\\\\\_numpy\\\\\\\\\\\\\\\_arrays.py
 ```
-Run the programs from inside their own folder (`code`, `changed\_parameter` or `modified\_case`). Programs that draw graphs save a PNG into `outputs/` and then open the plot window.
+Run the programs from inside their own folder (`code`, `changed\\\\\\\\\\\\\\\_parameter` or `modified\\\\\\\\\\\\\\\_case`). Programs that draw graphs save a PNG into `outputs/` and then open the plot window.
 Python 3.10 or newer and NumPy 2.0 or newer are needed, because `np.trapezoid` was added in NumPy 2.0.
 Submission notes
 The discussion is done as a group, but the GitHub repository is individual: create your own repository and upload this folder to it.

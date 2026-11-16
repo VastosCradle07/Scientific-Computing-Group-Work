@@ -1,42 +1,108 @@
-BIT 2118 Scientific Computing: Group Work Submission
-Tasks 2 to 20, each with the original program, a changed-parameter run, a modified real-world case, the captured outputs and graphs, and a written explanation.
-Folder layout
-Folder	Contents
-`code/`	The 19 original programs (Task 2 to Task 20), cleaned and comment-free
-`changed\\\\\\\\\\\\\\\_parameter/`	The same programs with one input or parameter changed (Instruction C)
-`modified\\\\\\\\\\\\\\\_case/`	New programs solving a different but related real-world case (Instruction E)
-`outputs/`	Text output of every program and every graph as a PNG
-`docs/`	One markdown file per task: inputs, operation, change, interpretation, new case (Instructions B, C, D, E)
-`PRESENTATION\\\\\\\\\\\\\\\_SUMMARY.txt`	Short plain-text summary for the presentation
-Task index
-Task	Topic and documentation	Modified real-world case
-2	NumPy Arrays and Numerical Computation	IoT water-tank level monitoring
-3	Mathematical Functions and Vectorization	Currency conversion plus VAT on two million transactions
-4	Floating-Point Arithmetic and Numerical Errors	Banking: adding one million small deposits
-5	Matrix Algebra and Matrix Operations	Drone waypoint path transformation (homogeneous coordinates)
-6	Solution of Systems of Linear Equations	Traffic flow through three roads
-7	Gaussian Elimination and LU Decomposition	Electrical circuit mesh currents with repeated voltage settings
-8	Iterative Methods for Linear Systems	Steady-state heat along a 7-point rod
-9	Eigenvalues and Eigenvectors	PageRank of a five-page website
-10	Root Finding: Bisection and Fixed-Point Methods	Break-even analysis of a product with congestion cost
-11	Root Finding: Newton-Raphson and Secant Methods	Finding the interest rate of a loan
-12	Polynomial and Nonlinear Equation Solving	Drone path against a no-fly zone, and a projectile landing time
-13	Interpolation	Filling missing sensor readings
-14	Curve Fitting and Approximation	Mobile app user growth: exponential versus linear model
-15	Numerical Differentiation	Acceleration from velocity data, plus step-size study
-16	Numerical Integration	Total river water volume from flow measurements
-17	Ordinary Differential Equations: Euler Method	Logistic population growth with different Euler step sizes
-18	Numerical Solution of ODEs Using SciPy	SIR epidemic model
-19	Numerical Optimization	Production planning: maximise profit
-20	Random Numbers and Monte Carlo Methods	Project completion risk, plus estimating pi
-How to run
-```bash
-pip install -r requirements.txt
-cd code
-python Task\\\\\\\\\\\\\\\_02\\\\\\\\\\\\\\\_numpy\\\\\\\\\\\\\\\_arrays.py
+BIT 2118: Scientific Computing — Group & Individual Work Repository
+Welcome to the official repository for BIT 2118 Scientific Computing. This repository contains Python-based implementations, modified real-world case studies, parameter variation analyses, and detailed documentation covering 20 core scientific computing tasks.
+---
+Course & Project Overview
+Course Code & Title: BIT 2118 – Scientific Computing
+Timeline: Group work to be completed by Week 10; Individual Group Project tasks conducted during Weeks 11–13.
+Submission Policy: While discussions and conceptual planning are conducted collaboratively in groups, each student must maintain and submit their own individual GitHub repository. Group repositories are strictly prohibited. All links and documentation must be uploaded via VLMS.
+---
+Repository Structure
+```text
+BIT2118_Scientific_Computing/
+│
+├── README.md                      # Comprehensive project documentation (this file)
+├── requirements.txt               # Python dependencies (NumPy, SciPy, Matplotlib)
+│
+├── code/                          # Base Python solution scripts for Tasks 2–20
+│   ├── Task_02_numpy_arrays.py
+│   ├── Task_03_vectorization.py
+│   └── ...
+│
+├── changed_parameter/             # Scripts demonstrating parameter variation (Instruction C)
+│   ├── Task_02_numpy_arrays_changed.py
+│   └── ...
+│
+├── modified_case/                 # Scripts applying methods to new real-world cases (Instruction E)
+│   ├── Task_02_water_tank_modified.py
+│   └── ...
+│
+├── outputs/                       # Generated text logs, console outputs, and saved plots (.png)
+│   └── ...
+│
+└── docs/                          # Detailed markdown documentation files per task
+    └── ...
 ```
-Run the programs from inside their own folder (`code`, `changed\\\\\\\\\\\\\\\_parameter` or `modified\\\\\\\\\\\\\\\_case`). Programs that draw graphs save a PNG into `outputs/` and then open the plot window.
-Python 3.10 or newer and NumPy 2.0 or newer are needed, because `np.trapezoid` was added in NumPy 2.0.
-Submission notes
-The discussion is done as a group, but the GitHub repository is individual: create your own repository and upload this folder to it.
-Upload your repository link and documentation through VLMS.
+---
+General Instructions Checklist
+Every task implemented in this repository adheres strictly to the assessment guidelines:
+Task Execution (Instruction A): All mandatory tasks (Tasks 2–20) are fully implemented.
+Mathematical Identification (Instruction B): Input values, governing formulas, and numerical operations are explicitly documented.
+Parameter Variation (Instruction C): At least one key input or parameter is systematically altered to analyze output sensitivity.
+Interpretation (Instruction D): Outputs are explained in plain text, accompanied by graphical visualizations where applicable.
+Real-World Modification (Instruction E): Programs are extended to solve distinct, practical real-world problems with documented assumptions and results.
+Individual Submission (Instruction F): Maintained solely within this individual student repository.
+---
+Summary of Tasks & Mathematical Concepts
+Task	Mathematical Concept & Python Module	Example Application / Real-World Problem
+2	NumPy Arrays & Numerical Computation (`numpy`)	Sensor readings from IoT devices; batch temperature conversion.
+3	Mathematical Functions & Vectorization (`numpy`, `timeit`)	Speed-up comparisons for large-scale network latency arrays.
+4	Floating-Point Arithmetic & Errors (`numpy`)	Absolute/relative error quantification and catastrophic cancellation.
+5	Matrix Algebra & Operations (`numpy`)	2D affine transformations (rotation and scaling) in computer graphics.
+6	Systems of Linear Equations (`numpy.linalg`)	Resource allocation and solving $Ax = b$ for active server loads.
+7	Gaussian Elimination & LU Decomposition (`scipy.linalg`)	Efficient repeated linear solves with single factorization $PA = LU$.
+8	Iterative Methods (Jacobi & Gauss-Seidel)	Steady-state heat distribution across sparse grid networks.
+9	Eigenvalues & Eigenvectors (`numpy.linalg`)	Network centrality metrics and PageRank-style analysis.
+10	Root Finding: Bisection & Fixed-Point (`scipy.optimize`)	Thermal equilibrium temperature matching in non-linear systems.
+11	Root Finding: Newton-Raphson & Secant (`scipy.optimize`)	Financial Internal Rate of Return (IRR) and Net Present Value (NPV).
+12	Nonlinear Systems (`scipy.optimize.root`)	Intersection points between geometric curves (circle and parabola).
+13	Interpolation (`scipy.interpolate`)	Cubic spline and linear interpolation for missing sensor data points.
+
+14	Curve Fitting & Least Squares (`scipy.optimize.curve_fit`)	Empirical server response-time modeling under increasing user loads.
+15	Numerical Differentiation (`numpy`)	Instantaneous velocity and acceleration estimation from GPS data.
+16	Numerical Integration (`scipy.integrate`)	Smart-meter energy consumption via Trapezoidal and Simpson’s rules.
+17	ODEs: Euler Method (`numpy`, `matplotlib`)	Newton's law of cooling for transient thermal simulation.
+18	ODEs: SciPy Solvers (`scipy.integrate.solve_ivp`)	RC electrical circuit charging dynamics using adaptive step-size ODE solvers.
+19	Numerical Optimization (`scipy.optimize.minimize`)	Cost minimization for cloud server resource allocation with constraints.
+20	Monte Carlo Methods (`numpy.random`)	Probabilistic risk analysis and server overload simulation under uncertainty.
+---
+Getting Started & Installation
+Prerequisites
+Make sure you have Python 3.8 or higher installed on your system along with pip.
+Installation Steps
+Clone your individual repository:
+```bash
+   git clone <your-individual-github-repo-link>
+   cd BIT2118_Scientific_Computing
+   ```
+Install the required Python packages:
+```bash
+   pip install -r requirements.txt
+   ```
+Running a Task Script
+To execute any base task, navigate to the code directory or run from root:
+```bash
+python code/Task_02_numpy_arrays.py
+```
+To run a modified real-world case study:
+```bash
+python modified_case/Task_02_water_tank_modified.py
+```
+---
+Python Libraries Used
+NumPy (`np`): Fast vectorized array operations, linear algebra solvers, matrix products (`@`), and random number generation (`default_rng`).
+SciPy (`scipy`): Advanced scientific computing submodules including `scipy.linalg`, `scipy.optimize`, `scipy.interpolate`, and `scipy.integrate`.
+Matplotlib (`plt`): High-quality plot generation for visualizing convergence curves, fitted models, ODE trajectories, and simulation results.
+Timeit (`timeit`): High-precision timing utilities for measuring the performance benefits of vectorization over explicit Python loops.
+---
+Key Mathematical Notation Reference
+Throughout the documentation and individual task write-ups, scientific notation and mathematical equations are formulated using standard conventions:
+Linear systems: $Ax = b$
+Eigenvalue problems: $A \mathbf{v} = \lambda \mathbf{v}$
+Numerical integration: $\int_{a}^{b} f(x) , dx$
+Least squares objective: $\min \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
+---
+Author & Repository Maintenance
+Student Name: Tymon Jasiri
+Registration Number: [Your Reg Number Here]
+Course: BIT 2118 Scientific Computing
+Institution: [Your University/College Name]
